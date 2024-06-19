@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.logo-img {
+  height: 70px;
+  width: 70px;
+  border-radius: 80px;
+}
+
+.err-msg {
+  color: red;
+  font-family: 'Roboto';
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.heading {
+  font-family: 'Inter UI', sans-serif;
+  font-weight: lighter;
+  font-size: 25px;
+  color: rgb(20, 20, 26);
+}
+
+.login-container {
+  width: 50%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.login-btn {
+  background-image: linear-gradient(to right, rgb(31, 26, 26), rgb(57, 55, 55));
+  color: white;
+}
+
+.sign {
+  color: rgb(61, 61, 79);
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-size: 15px;
+}

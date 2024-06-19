@@ -1,0 +1,569 @@
+<!doctype html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/ac42c3b1f7.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/style_app.css" />
+  </head>
+
+  <body>
+    <div class="page-container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav mr-auto text-left">
+              <a class="nav-link active" id="navItem1" href="#wcuSection">
+                <i class="fa-solid fa-house text-light"></i>
+                <span class="sr-only">(current)</span>
+              </a>
+              <a class="nav-link" href="#aboutUsSection" id="navItem2"
+                >About us</a
+              >
+              <a class="nav-link" href="#featuresSection" id="navItem3"
+                >Features</a
+              >
+              <a class="nav-link" href="#faqsSection" id="navItem4">FAQ's</a>
+            </div>
+          </div>
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://mir-s3-cdn-cf.behance.net/user/276/561793729753301.60dabcee13fd0.png"
+              class="logo-img"
+            />
+          </a>
+        </div>
+      </nav>
+
+      <div id="homeSection" class="page-body">
+        <div class="sidebar2 sidebar">
+          <div>
+            <div
+              id="Artificial Intelligence"
+              class="d-flex flex-row justify-content-between"
+            >
+              <a href="#">
+                <h1 class="sidebarHeading">Artificial Intelligence</h1>
+              </a>
+            </div>
+            <hr class="line" />
+          </div>
+          <div>
+            <div
+              id="Machine Learning"
+              class="d-flex flex-row justify-content-between"
+            >
+              <a href="#">
+                <h1 class="sidebarHeading">Machine Learning</h1>
+              </a>
+            </div>
+            <hr class="line" />
+          </div>
+          <div>
+            <div
+              id="Data Science"
+              class="d-flex flex-row justify-content-between"
+            >
+              <a href="#">
+                <h1 class="sidebarHeading">Data Science</h1>
+              </a>
+            </div>
+            <hr class="line" />
+          </div>
+          <div>
+            <div
+              id="Web Development"
+              class="d-flex flex-row justify-content-between"
+            >
+              <a href="#">
+                <h1 class="sidebarHeading">Web Development</h1>
+              </a>
+            </div>
+            <hr class="line" />
+          </div>
+          <div>
+            <div
+              id="Data Structures & Algorithms"
+              class="d-flex flex-row justify-content-between"
+            >
+              <a href="#">
+                <h1 class="sidebarHeading">Data Structures & Algorithms</h1>
+              </a>
+            </div>
+            <hr class="line" />
+          </div>
+          <div>
+            <div id="DevOps" class="d-flex flex-row justify-content-between">
+              <a href="#">
+                <h1 class="sidebarHeading">DevOps</h1>
+              </a>
+            </div>
+            <hr class="line" />
+          </div>
+          <div>
+            <div
+              id="Blockchain"
+              class="d-flex flex-row justify-content-between"
+            >
+              <a href="#">
+                <h1 class="sidebarHeading">Blockchain</h1>
+              </a>
+            </div>
+            <hr class="line" />
+          </div>
+          <div
+            id="CyberSecurity"
+            class="d-flex flex-row justify-content-between"
+          >
+            <a href="#">
+              <h1 class="sidebarHeading">cybersecurity</h1>
+            </a>
+          </div>
+        </div>
+
+        <div class="content" id="content">
+          <button class="btn btn-primary post-btn" id="postBtn">
+            Post an Article
+          </button>
+          <div class="container">
+            <div class="row">
+              <div
+                id="formContainer"
+                class="mt-3 shadow form-container col-12 col-lg-10"
+              ></div>
+              <hr />
+              <div id="dataContainer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="aboutUsSection" class="bg-card d-none mt-3 mb-5">
+        <h1 class="about-heading ml-lg-5">
+          Welcome to TechVerse: Where Creativity Meets Code
+        </h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-5 ml-lg-5 mr-lg-5 about-card shadow mt-3">
+              <h1 class="about-sub-heading">
+                A Platform for Technology Content Creators
+              </h1>
+              <p class="about-text">
+                In today's digital age, the rapid evolution of technology
+                continues to shape our world, driving innovation and
+                transforming industries.Behind every breakthrough and every new
+                development lies a community of passionate individuals:
+                technology content creators.These creators play a pivotal role
+                in disseminating knowledge, sharing insights, and inspiring the
+                next generation of innovators. To empower these creators and
+                facilitate the exchange of ideas, a dedicated platform has
+                emerged, providing a space for writers, educators, and
+                enthusiasts to converge and collaborate.
+              </p>
+            </div>
+
+            <div class="col-12 col-lg-5 about-card shadow mt-3">
+              <h1 class="about-sub-heading">A Hub for Knowledge Sharing</h1>
+              <p class="about-text">
+                At the heart of this platform lies a commitment to knowledge
+                sharing. Content creators from diverse backgrounds and expertise
+                levels come together to write articles, offer suggestions, and
+                outline roadmaps for learning technology. Whether it's a deep
+                dive into the intricacies of machine learning algorithms, a
+                step-by-step guide to mastering a programming language, or a
+                roadmap for transitioning into a career in cybersecurity, the
+                platform offers a wealth of valuable resources for learners and
+                practitioners alike.
+              </p>
+            </div>
+
+            <div class="col-12 col-lg-5 ml-lg-5 mr-lg-5 about-card shadow mt-3">
+              <h1 class="about-sub-heading">
+                Community Engagement and Collaboration
+              </h1>
+              <p class="about-text">
+                Beyond mere content consumption, the platform fosters a sense of
+                community and collaboration. Users can engage with creators
+                through comments, discussions, and direct messages, facilitating
+                dialogue and knowledge exchange. Whether it's seeking
+                clarification on a complex topic, sharing personal experiences,
+                or offering constructive feedback, the community thrives on
+                active participation and mutual support.
+              </p>
+            </div>
+            <div class="col-12 col-lg-5 about-card shadow mt-3">
+              <h1 class="about-sub-heading">Curating Quality Content</h1>
+              <p class="about-text">
+                In a sea of information, quality is paramount. To ensure that
+                users have access to accurate, reliable, and up-to-date content,
+                the platform implements rigorous curation mechanisms. Content is
+                vetted by editors, rated by users, and promoted based on
+                engagement metrics, ensuring that only the most valuable and
+                relevant resources rise to the top.
+              </p>
+            </div>
+            <div class="col-12 col-lg-5 ml-lg-5 mr-lg-5 about-card shadow mt-3">
+              <h1 class="about-sub-heading">Empowering Creators</h1>
+              <p class="about-text">
+                Central to the platform's mission is the empowerment of content
+                creators. Through a range of monetization options, creators are
+                incentivized to continue producing high-quality content and
+                investing in their craft. Whether it's through ad revenue
+                sharing, subscription models, or direct contributions from
+                users, creators have the opportunity to turn their passion into
+                a sustainable career.
+              </p>
+            </div>
+
+            <div class="col-12 col-lg-5 about-card shadow mt-3">
+              <h1 class="about-sub-heading">
+                Focus on Accessibility and Inclusivity
+              </h1>
+              <p class="about-text">
+                In keeping with the ethos of technology for all, the platform is
+                designed with accessibility and inclusivity in mind. Language
+                support, accessibility features for users with disabilities, and
+                robust community guidelines ensure that the platform remains
+                welcoming and accessible to all users, regardless of background
+                or ability.
+              </p>
+            </div>
+
+            <div class="col-12 mt-3 mb-5">
+              <h1 class="looking-heading">Looking Ahead</h1>
+              <p class="looking-text">
+                As technology continues to advance and evolve, the need for a
+                dedicated platform for technology content creators has never
+                been greater. By providing a space for knowledge sharing,
+                community engagement, and empowerment, the platform serves as a
+                catalyst for innovation and progress in the ever-expanding world
+                of technology. In conclusion, the platform for technology
+                content creators represents more than just a digital space—it's
+                a vibrant community, a repository of knowledge, and a driving
+                force behind the future of technology. As creators and learners
+                come together to collaborate and inspire, the possibilities are
+                endless, and the journey towards technological advancement is
+                truly limitless.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="featuresSection" class="bg-card d-none mt-3 mb-5">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-12 col-lg-5 ml-lg-5 mr-lg-5 about-card shadow d-flex flex-row"
+            >
+              <div class="mr-2">
+                <h1 class="about-sub-heading text-left">
+                  Unlocking the Power of AI
+                </h1>
+                <p class="about-text">
+                  Artificial Intelligence (AI) is not just the future—it's the
+                  present. From virtual assistants to self-driving cars, AI is
+                  revolutionizing the way we live, work, and interact with the
+                  world around us. At TechVerse, we're passionate about
+                  unlocking the full potential of AI and harnessing its power to
+                  drive innovation and solve real-world challenges.
+                </p>
+              </div>
+
+              <img
+                src="https://moptil.com/wp-content/uploads/2023/02/enterprise-AI.jpg"
+                class="features-img"
+              />
+            </div>
+
+            <div class="col-12 col-lg-5 about-card shadow d-flex flex-row">
+              <div class="order-2 ml-2">
+                <h1 class="about-sub-heading text-left">
+                  Embark on a Journey into Machine Learning
+                </h1>
+                <p class="about-text">
+                  Machine Learning (ML) is the driving force behind some of
+                  today's most groundbreaking technologies. From personalized
+                  recommendations to predictive analytics, ML is reshaping
+                  industries and revolutionizing the way we interact with data.
+                </p>
+              </div>
+
+              <img
+                src="https://emeritus.org/in/wp-content/uploads/sites/3/2023/01/What-is-machine-learning-Definition-types.jpg.webp"
+                class="features-img order-1"
+              />
+            </div>
+
+            <div
+              class="col-12 col-lg-5 ml-lg-5 mr-lg-5 about-card shadow d-flex flex-row"
+            >
+              <div class="mr-2">
+                <h1 class="about-sub-heading text-left">
+                  Discover the Magic of Data Science and Analytics
+                </h1>
+                <p class="about-text">
+                  Data Science and Analytics (DSa) are at the forefront of the
+                  digital revolution, transforming raw data into actionable
+                  insights and driving informed decision-making across
+                  industries.
+                </p>
+              </div>
+
+              <img
+                src="https://assets-global.website-files.com/63ccf2f0ea97be12ead278ed/644a18b637053fa3709c5ba2_what-is-data-science.jpg"
+                class="features-img"
+              />
+            </div>
+
+            <div class="col-12 col-lg-5 about-card shadow d-flex flex-row">
+              <div class="order-2 ml-2">
+                <h1 class="about-sub-heading text-left">
+                  Demystifying Data Structures and Algorithms
+                </h1>
+                <p class="about-text">
+                  Data Structures and Algorithms (DSA) serve as the backbone of
+                  computer science, enabling efficient data organization and
+                  problem-solving techniques.
+                </p>
+              </div>
+
+              <img
+                src="https://cdn.dribbble.com/users/2136630/screenshots/4238623/dsa_logo.jpg"
+                class="features-img order-1"
+              />
+            </div>
+
+            <div
+              class="col-12 col-lg-5 ml-lg-5 mr-lg-5 about-card shadow d-flex flex-row"
+            >
+              <div class="mr-2">
+                <h1 class="about-sub-heading text-left">
+                  Unleash Your Creativity with Web Development
+                </h1>
+                <p class="about-text">
+                  Web development is the gateway to building immersive digital
+                  experiences and shaping the online world. At TechVerse, we're
+                  passionate about empowering creators to bring their visions to
+                  life through the power of web development.
+                </p>
+              </div>
+
+              <img
+                src="https://miro.medium.com/v2/resize:fit:1200/0*M4bxiCIjcTK-2Xr6.jpeg"
+                class="features-img"
+              />
+            </div>
+
+            <div class="col-12 col-lg-5 about-card shadow d-flex flex-row">
+              <div class="order-2 ml-2">
+                <h1 class="about-sub-heading text-left">
+                  Unlocking the Future with Blockchain
+                </h1>
+                <p class="about-text">
+                  Blockchain technology isn't just a buzzword—it's a
+                  revolutionary force reshaping industries worldwide. By
+                  decentralizing data and ensuring transparency and security,
+                  blockchain has the potential to transform everything from
+                  finance to healthcare.
+                </p>
+              </div>
+
+              <img
+                src="https://online.stanford.edu/sites/default/files/inline-images/1600X900-How-does-blockchain-work.jpg"
+                class="features-img order-1"
+              />
+            </div>
+
+            <div
+              class="col-12 col-lg-5 ml-lg-5 mr-lg-5 mb-lg-5 about-card shadow d-flex flex-row"
+            >
+              <div class="mr-2">
+                <h1 class="about-sub-heading text-left">
+                  Elevate Your Development with DevOps
+                </h1>
+                <p class="about-text">
+                  DevOps isn't just a methodology—it's a culture of
+                  collaboration, automation, and continuous improvement. At
+                  TechVerse, we're passionate about empowering teams to
+                  streamline their development processes and deliver software
+                  faster and more reliably.
+                </p>
+              </div>
+
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/009/903/927/non_2x/devops-banner-concept-has-8-steps-to-analyze-such-as-plan-code-build-operate-deploy-test-monitor-and-release-for-software-development-and-information-technology-operations-infographic-vector.jpg"
+                class="features-img"
+              />
+            </div>
+
+            <div class="col-12 col-lg-5 mb-5 about-card shadow d-flex flex-row">
+              <div class="order-2 ml-2">
+                <h1 class="about-sub-heading text-left">
+                  DSecuring the Digital Frontier: Cybersecurity at TechVerse
+                </h1>
+                <p class="about-text">
+                  In today's interconnected world, cybersecurity is more
+                  critical than ever. At TechVerse, we're dedicated to
+                  empowering individuals and organizations with the knowledge
+                  and tools they need to defend against cyber threats and
+                  safeguard their digital assets.
+                </p>
+              </div>
+
+              <img
+                src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202309/cybersecurity-plan-2023-sixteen_nine.png?size=1200:675"
+                class="features-img order-1"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="faqsSection" class="bg-card d-none mt-3 mb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-8 about-card shadow d-flex flex-column">
+              <div class="d-flex justify-content-between flex-row">
+                <h1 class="question">What is TechVerse?</h1>
+                <p id="q1"><i class="fa-solid fa-angle-down"></i></p>
+              </div>
+              <p class="solution d-none" id="solution1">
+                TechVerse is a vibrant online platform for technology
+                enthusiasts, learners, and professionals. We provide a wide
+                range of resources, including articles, tutorials, and
+                interactive tools, to help individuals stay informed and
+                empowered in the world of technology.
+              </p>
+            </div>
+            <div class="col-12 col-lg-8 about-card shadow d-flex flex-column">
+              <div class="d-flex justify-content-between flex-row">
+                <h1 class="question">Who can benefit from TechVerse?</h1>
+                <p id="q2"><i class="fa-solid fa-angle-down"></i></p>
+              </div>
+              <p class="solution d-none" id="solution2">
+                TechVerse is designed for anyone with an interest in technology,
+                from beginners looking to learn the basics to seasoned
+                professionals seeking advanced insights and resources. Whether
+                you're a student, developer, entrepreneur, or tech enthusiast,
+                there's something for everyone at TechVerse.
+              </p>
+            </div>
+            <div class="col-12 col-lg-8 about-card shadow d-flex flex-column">
+              <div class="d-flex justify-content-between flex-row">
+                <h1 class="question">How can I contribute to TechVerse?</h1>
+                <p id="q3"><i class="fa-solid fa-angle-down"></i></p>
+              </div>
+              <p class="solution d-none" id="solution3">
+                We welcome contributions from the community! If you're
+                passionate about technology and have knowledge or insights to
+                share, you can contribute articles, tutorials, or other content
+                to TechVerse. Simply reach out to our editorial team to learn
+                more about the submission process.
+              </p>
+            </div>
+            <div class="col-12 col-lg-8 about-card shadow d-flex flex-column">
+              <div class="d-flex justify-content-between flex-row">
+                <h1 class="question">Is TechVerse free to use?</h1>
+                <p id="q4"><i class="fa-solid fa-angle-down"></i></p>
+              </div>
+              <p class="solution d-none" id="solution4">
+                Yes, TechVerse is completely free to use. All of our resources,
+                articles, and tools are available to access without any cost.
+                Simply visit our website and start exploring!
+              </p>
+            </div>
+            <div class="col-12 col-lg-8 about-card shadow d-flex flex-column">
+              <div class="d-flex justify-content-between flex-row">
+                <h1 class="question">Can I advertise on TechVerse?</h1>
+                <p id="q5"><i class="fa-solid fa-angle-down"></i></p>
+              </div>
+              <p class="solution d-none" id="solution5">
+                Yes, we offer advertising opportunities on TechVerse for
+                businesses and organizations looking to reach our audience of
+                technology enthusiasts and professionals. To inquire about
+                advertising options and rates, please contact our advertising
+                team for more information.
+              </p>
+            </div>
+            <div class="col-12 col-lg-8 about-card shadow d-flex flex-column">
+              <div class="d-flex justify-content-between flex-row">
+                <h1 class="question">
+                  How can I stay updated with TechVerse's latest content?
+                </h1>
+                <p id="q6"><i class="fa-solid fa-angle-down"></i></p>
+              </div>
+              <p class="solution d-none" id="solution6">
+                To stay updated with TechVerse's latest content, you can
+                subscribe to our newsletter or follow us on social media. We
+                regularly share updates, new articles, and announcements on our
+                social media channels, so be sure to connect with us on
+                Facebook, Twitter, and Instagram.
+              </p>
+            </div>
+            <div
+              class="col-12 col-lg-8 about-card shadow d-flex flex-column mb-4"
+            >
+              <div class="d-flex justify-content-between flex-row">
+                <h1 class="question">
+                  Is TechVerse's content vetted for accuracy and quality?
+                </h1>
+                <p id="q7"><i class="fa-solid fa-angle-down"></i></p>
+              </div>
+              <p class="solution d-none" id="solution7">
+                Yes, we take pride in ensuring that all content published on
+                TechVerse meets high standards of accuracy and quality. Our
+                editorial team reviews and verifies all submissions before they
+                are published to ensure that our readers receive reliable and
+                informative content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-footer text-center">
+        <i class="fa-brands fa-facebook icon m-2"></i>
+        <i class="fa-brands fa-x-twitter icon m-2"></i>
+        <i class="fa-brands fa-instagram icon m-2"></i>
+        <i class="fa-brands fa-github icon m-2"></i>
+      </div>
+    </div>
+
+    <script src="/js/script_app.js"></script>
+  </body>
+</html>

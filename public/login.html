@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/ac42c3b1f7.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/style_login.css" />
+  </head>
+
+  <body>
+    <div class="container d-flex flex-row justify-content-center d-none" id = "entireContainer">
+      <div class="login-container shadow p-3 mt-5" id = "loginEl">
+        <div class="text-center">
+          <img
+            src="https://mir-s3-cdn-cf.behance.net/user/276/561793729753301.60dabcee13fd0.png"
+            class="logo-img"
+          />
+        </div>
+        <h1 class="heading text-center">Techverse</h1>
+        
+        <div class="text-center d-none" id = "spinnerEl">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+
+        <form id="myForm">
+          <div class="mb-3">
+            <label for="name"> Username: </label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Username"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password"> Password: </label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+            />
+          </div>
+          <p class = "err-msg" id = "errMsg"></p>
+          <div class="mb-3" id = "signInBtn">
+            <button type="submit" class="form-control login-btn" onclick = "signIn()">
+              Sign In
+            </button>
+          </div>
+
+          <div class="mb-3 d-none" id = "signUpBtn">
+            <button type="submit" class="form-control login-btn" onclick = "signUp()" >
+              Sign Up
+            </button>
+          </div>
+
+          <p id = "status"></p>
+
+        <div class="text-right">
+          <a href="#" class="sign" id="signIn"> Sign In </a>
+          <a href="#" class="sign" id="signUp">/ Sign Up </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/script_login.js"></script>
+  </body>
+</html>
+
