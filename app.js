@@ -104,3 +104,34 @@ app.post('/post/', async (request, response) => {
     response.send(JSON.stringify('Invalid domain'))
     }
     })
+
+app.post('/getRecords/', async (request, response) => {
+      const {domain,pageNumber} =
+      request.body
+      
+      const domainTables = {
+      ai: 'ai_table',
+      ml: 'ml_table',
+      ds: 'ds_table',
+      webd: 'webd_table',
+      dsa: 'dsa_table',
+      devops: 'devops_table',
+      bct: 'bct_table',
+      cs: 'cs_table',
+      }
+      
+      const tableName = domainTables[domain]
+      const limit = 5 
+      const offset = (pageNumber - 1) * 5
+
+      
+      if (tableName) {
+      const query = `SELECT * FROM ${tableName} LIMIT ${limit} OFFSET ${offset}`
+      const result = await db.all(query)
+      response.status(201)
+      response.send(JSON.stringify(result))
+      } else {
+      response.status(400)
+      response.send(JSON.stringify('Invalid domain'))
+      }
+      })

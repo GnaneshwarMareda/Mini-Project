@@ -22,6 +22,67 @@
   font-weight: normal;
 }
 
+.spanned-one{
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 600;
+  color: #03090d;
+}
+
+.icons-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-card{
+  width: 60vw;
+}
+
+.my-icon{
+  width: 60px;
+  height: 25px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.my-number{
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 22px;
+  color: #03090d;
+  margin-right: 92px;
+}
+
+.last{
+  opacity: 0.3;
+}
+
+.card-text{
+  font-family: "Roboto";
+  font-weight: light;
+  font-size: 16px;
+  color: #2e2d2a;
+}
+
+.end-error{
+  font-size: 32px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  text-align: center;
+  align-self: center;
+  color: #03090d;
+  margin-top: 50px;
+}
+
+.data-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .form-container {
   border-radius: 5px;
 }

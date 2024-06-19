@@ -12,6 +12,13 @@ let q6 = document.getElementById('q6')
 let solution6 = document.getElementById('solution6')
 let q7 = document.getElementById('q7')
 let solution7 = document.getElementById('solution7')
+let spinnerEl = document.getElementById('spinnerEl')
+
+let pageNumber = 1
+
+function toggleFormSpinner() {
+  spinnerEl.classList.toggle('d-none');
+}
 
 q1.addEventListener('click', function () {
   solution1.classList.toggle('d-block')
@@ -270,8 +277,12 @@ postBtn.onclick = function () {
           })
           .then(data => {
             console.log('Success:', data);
-            formContainer.textContent = 'Post submitted successfully!';
+            formContainer.textContent = 'Post added successfully!';
             formContainer.classList.add('added')
+            setTimeout(() => {
+              formContainer.textContent = ""
+              formContainer.classList.remove('added')
+            },2000)
           })
           .catch(error => {
             console.error('Error:', error);
@@ -297,12 +308,145 @@ let obj = {
   cs: 'Navigate the digital frontier with confidence and resilience. Explore the world of cybersecurity and arm yourself with the knowledge, tools, and strategies to defend against cyber threats, protect data, and safeguard digital assets.',
 }
 
-function addContent(domain) {
+function addRecords(domain){
+
+  const postData = {
+    domain,
+    pageNumber,
+  };
+
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+    body: JSON.stringify(postData),
+  };
+
+
+  fetch('http://localhost:3000/getRecords/', options)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+
+      if(data.length == 0){
+        let error = document.createElement('p')
+        error.textContent = 'You \'ve reached the end'
+        error.classList.add('end-error')
+        dataContainer.appendChild(error)
+      }
+
+      function createAndAppend(headTitle,content,myCard){
+
+        let spanned = document.createElement('span');
+        spanned.classList.add('spanned-one');
+        spanned.textContent = headTitle + ' : ';
+        
+        let txtEle = document.createElement('p');
+        txtEle.appendChild(spanned);
+        txtEle.classList.add('card-text')
+
+        if(headTitle !== 'Url'){
+  
+          txtEle.appendChild(document.createTextNode(content || 'N/A'));
+
+        } else {
+
+          let anchor = document.createElement('a');
+          anchor.textContent = content
+          anchor.setAttribute('href',content)
+          txtEle.appendChild(anchor)
+
+        }
+
+        
+        myCard.appendChild(txtEle);
+
+
+      }
+
+      for(let course of data){
+        
+
+        let myCard = document.createElement('div');
+        myCard.classList.add('form-container','shadow','p-2','m-3','my-card')
+        dataContainer.appendChild(myCard)
+
+        createAndAppend('Title',course['title'],myCard)
+        createAndAppend('Organization',course['organization'],myCard)
+        createAndAppend('Description',course['description'],myCard)
+        createAndAppend('Url',course['course_reference'],myCard)
+
+      }
+
+      let iconsContainer = document.createElement('div')
+      iconsContainer.classList.add('icons-container','mt-3')
+
+      dataContainer.appendChild(iconsContainer)
+
+      let leftIcon = document.createElement('i')
+      leftIcon.classList.add("fa-solid","fa-chevron-left",'my-icon')
+      iconsContainer.appendChild(leftIcon)
+
+      let number = document.createElement('p')
+      number.textContent = pageNumber
+      number.classList.add('my-number')
+      iconsContainer.appendChild(number)
+
+      let rightIcon = document.createElement('i')
+      rightIcon.classList.add("fa-solid","fa-chevron-right",'my-icon')
+      iconsContainer.appendChild(rightIcon)
+
+      if(pageNumber == 1){
+        leftIcon.classList.add('last')
+      } else {
+        leftIcon.classList.remove('last')
+      }
+
+      if(data.length === 0){
+        rightIcon.classList.add('last')
+      } else{
+        rightIcon.classList.remove('last')
+      }
+
+      leftIcon.onclick = () => {
+        if(pageNumber - 1 == 0) return
+        pageNumber = pageNumber - 1;
+        dataContainer.textContent = ''
+        addContent(domain)
+      }
+
+      rightIcon.onclick = () => {
+        if(data.length == 0) return
+        pageNumber = pageNumber + 1
+        dataContainer.textContent = ''
+        addContent(domain)
+      }
+
+
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      console.log('Response:', error.response);
+    });
+}
+
+async function addContent(domain) {
   currentDomain = domain
   let h1 = document.createElement('h1')
   h1.textContent = `\"${obj[domain]}\"`
   h1.classList.add('quote-tag')
   dataContainer.appendChild(h1)
+  toggleFormSpinner();
+  await setTimeout(() => {
+    toggleFormSpinner();
+    addRecords(domain);
+  },1000);
 }
 
 let icon = document.createElement('i')
@@ -319,6 +463,7 @@ function addAi() {
   if (bct.contains(icon)) bct.removeChild(icon)
   if (devops.contains(icon)) devops.removeChild(icon)
   if (cs.contains(icon)) cs.removeChild(icon)
+  pageNumber = 1;
   addContent('ai')
 }
 
@@ -333,6 +478,7 @@ function addMl() {
   if (bct.contains(icon)) bct.removeChild(icon)
   if (devops.contains(icon)) devops.removeChild(icon)
   if (cs.contains(icon)) cs.removeChild(icon)
+    pageNumber = 1;
     addContent('ml')
 }
 
@@ -347,6 +493,7 @@ function addDs() {
   if (bct.contains(icon)) bct.removeChild(icon)
   if (devops.contains(icon)) devops.removeChild(icon)
   if (cs.contains(icon)) cs.removeChild(icon)
+    pageNumber = 1;
     addContent('ds')
 }
 
@@ -361,6 +508,7 @@ function addWebd() {
   if (bct.contains(icon)) bct.removeChild(icon)
   if (devops.contains(icon)) devops.removeChild(icon)
   if (cs.contains(icon)) cs.removeChild(icon)
+    pageNumber = 1;
     addContent('webd')
 }
 
@@ -376,6 +524,7 @@ function addDsa() {
   if (bct.contains(icon)) bct.removeChild(icon)
   if (devops.contains(icon)) devops.removeChild(icon)
   if (cs.contains(icon)) cs.removeChild(icon)
+    pageNumber = 1;
   addContent('dsa')
 }
 
@@ -391,6 +540,7 @@ function addDevops() {
   if (bct.contains(icon)) bct.removeChild(icon)
   if (dsa.contains(icon)) dsa.removeChild(icon)
   if (cs.contains(icon)) cs.removeChild(icon)
+    pageNumber = 1;
   addContent('devops')
 }
 
@@ -406,6 +556,7 @@ function addBct() {
   if (dsa.contains(icon)) dsa.removeChild(icon)
   if (devops.contains(icon)) devops.removeChild(icon)
   if (cs.contains(icon)) cs.removeChild(icon)
+    pageNumber = 1;
   addContent('bct')
 }
 
@@ -420,6 +571,7 @@ function addCs() {
   if (bct.contains(icon)) bct.removeChild(icon)
   if (devops.contains(icon)) devops.removeChild(icon)
   if (dsa.contains(icon)) dsa.removeChild(icon)
+    pageNumber = 1;
     addContent('cs')
 }
 
