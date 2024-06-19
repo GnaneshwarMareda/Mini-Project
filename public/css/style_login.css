@@ -29,6 +29,7 @@
 .login-btn {
   background-image: linear-gradient(to right, rgb(31, 26, 26), rgb(57, 55, 55));
   color: white;
+  cursor: pointer;
 }
 
 .sign {

@@ -12,12 +12,12 @@ let q6 = document.getElementById('q6')
 let solution6 = document.getElementById('solution6')
 let q7 = document.getElementById('q7')
 let solution7 = document.getElementById('solution7')
-let spinnerEl = document.getElementById('spinnerEl')
+let spinnerEle = document.getElementById('spinnerEle')
 
 let pageNumber = 1
 
 function toggleFormSpinner() {
-  spinnerEl.classList.toggle('d-none');
+  spinnerEle.classList.toggle('d-none');
 }
 
 q1.addEventListener('click', function () {
@@ -277,12 +277,13 @@ postBtn.onclick = function () {
           })
           .then(data => {
             console.log('Success:', data);
-            formContainer.textContent = 'Post added successfully!';
+            formContainer.textContent = ""
+            let success = document.createElement('p')
+            success.textContent = "Post added successfully"
+            success.classList.add('spanned-one')
+            formContainer.appendChild(success)
+            formContainer.appendChild(icon)
             formContainer.classList.add('added')
-            setTimeout(() => {
-              formContainer.textContent = ""
-              formContainer.classList.remove('added')
-            },2000)
           })
           .catch(error => {
             console.error('Error:', error);
@@ -292,6 +293,7 @@ postBtn.onclick = function () {
     }
 
     icon.onclick = function () {
+      formContainer.classList.remove('added')
       formContainer.textContent = ''
     }
 }

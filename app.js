@@ -29,7 +29,7 @@ let initializeDb = async () => {
 
 initializeDb()
 
-app.get('/login', (request, response) => {
+app.get('/', (request, response) => {
   response.sendFile(path.join(__dirname, 'public', 'login.html'))
 })
 
@@ -73,7 +73,7 @@ app.post('/login/', async (request, response) => {
   }
 })
 
-app.get('/', (request, response) => {
+app.get('/app/', (request, response) => {
   response.sendFile(path.join(__dirname, 'public', 'app_index.html'))
 })
 
