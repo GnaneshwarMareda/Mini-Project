@@ -1,0 +1,12 @@
+INSERT INTO webd_table (organization, title, description, course_reference) VALUES
+('Udemy', 'The Web Developer Bootcamp 2023', 'Comprehensive web development course covering HTML, CSS, JS, Node, React, MongoDB, and more.', 'https://www.udemy.com/course/the-web-developer-bootcamp/'),
+('Coursera', 'Full-Stack Web Development with React', 'Learn front-end and hybrid mobile development, with server-side support, using React, React Native, and Node.js.', 'https://www.coursera.org/specializations/full-stack-react'),
+('edX', 'CS50\'s Web Programming with Python and JavaScript', 'Focuses on designing and implementing web apps with Python, JavaScript, and SQL using frameworks such as Django, React, and Bootstrap.', 'https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript'),
+('Udemy', 'The Complete JavaScript Course 2023: From Zero to Expert!', 'A deep dive into JavaScript, from basics to advanced concepts, including project-based learning.', 'https://www.udemy.com/course/the-complete-javascript-course/'),
+('freeCodeCamp', 'Responsive Web Design Certification', 'A series of lessons and projects covering HTML, CSS, Flexbox, and CSS Grid.', 'https://www.freecodecamp.org/learn/responsive-web-design/'),
+('Udemy', 'Modern React with Redux', 'Learn React and Redux through project-based learning and build powerful web applications.', 'https://www.udemy.com/course/react-redux/'),
+('Udemy', 'Web Development with Google’s Go (golang) Programming Language', 'Learn web development using Go programming language.', 'https://www.udemy.com/course/web-development-with-go/'),
+('Udacity', 'Front-End Web Developer Nanodegree', 'Comprehensive course to learn front-end web development, including HTML, CSS, JavaScript, and React.', 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011'),
+('Udemy', 'The Complete 2023 Web Development Bootcamp', 'All-in-one course covering HTML, CSS, JavaScript, Node, React, MongoDB, and more.', 'https://www.udemy.com/course/the-complete-web-development-bootcamp/'),
+('Udemy', 'The Complete Node.js Developer Course (3rd Edition)', 'Learn Node.js by building real-world applications with Node, Express, MongoDB, and more.', 'https://www.udemy.com/course/the-complete-nodejs-developer-course-2/');
+

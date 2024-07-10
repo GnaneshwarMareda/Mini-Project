@@ -1,0 +1,12 @@
+INSERT INTO cs_table (organization, title, description, course_reference) VALUES
+('University of Maryland', 'Cybersecurity Specialization', 'This specialization covers foundational concepts of cybersecurity, software security, cryptography, and hardware security.', 'https://www.coursera.org/specializations/cyber-security'),
+('NYU', 'Introduction to Cyber Security Specialization', 'Provides a comprehensive overview of modern information and system protection technology and methods.', 'https://www.coursera.org/specializations/intro-cyber-security'),
+('University of Colorado', 'Cybersecurity for Business', 'Focuses on practical techniques for protecting small to medium businesses from cyber threats.', 'https://www.coursera.org/learn/cyber-security-business'),
+('Nathan House', 'Cyber Security Course for Beginners: Level 01', 'Aimed at beginners, this course covers the basics of cybersecurity, including terminology, methodologies, and techniques.', 'https://www.udemy.com/course/cyber-security-course-for-beginners/'),
+('Nathan House', 'The Complete Cyber Security Course: Hackers Exposed', 'Comprehensive course that delves into the mind of a hacker and how to counteract hacking attempts.', 'https://www.udemy.com/course/the-complete-internet-security-privacy-course-volume-1/'),
+('LinkedIn Learning', 'Cyber Security Foundations', 'Covers essential principles of cybersecurity including security architecture, risk management, and more.', 'https://www.linkedin.com/learning/cybersecurity-foundations'),
+('(ISC)²', 'Certified Information Systems Security Professional (CISSP)', 'Preparation for the CISSP certification, covering the eight domains of the CISSP CBK (Common Body of Knowledge).', 'https://www.udemy.com/course/cissp-certification-boot-camp/'),
+('Udemy', 'Cyber Security and Ethical Hacking', 'An introduction to ethical hacking techniques and methodologies used to protect systems from cyber threats.', 'https://www.udemy.com/course/cyber-security-ethical-hacking-course/'),
+('Stanford University', 'Network Security', 'Focuses on networking and security protocols, network security tools, and risk mitigation strategies.', 'https://www.coursera.org/learn/computer-network-security'),
+('FutureLearn', 'Introduction to Cyber Security', 'Basics of cybersecurity, including types of attacks, defense mechanisms, and risk management.', 'https://www.futurelearn.com/courses/introduction-to-cyber-security');
+
